@@ -1,7 +1,7 @@
 # sunnyboy-capture
 Capture data from a Sunny Boy inverter
 
-* Installation notes (ubuntu 16.03):
+* Installation notes (ubuntu 16.04):
 1) `sudo apt install nodejs` 
 1) `sudo apt install npm`
 1) `npm install --save request`
