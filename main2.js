@@ -4,7 +4,6 @@ var server = "https://192.168.1.140";
 var SunnyCapture = require('./lib/classTest.js');
 
 var dataHandler = function(resp) {
-  console.log("dataHandler()");
   console.log(resp.headers.join(", "));
   var i, len;
   for (len = resp.data.length, i = 0; i < len; i++) {
@@ -26,8 +25,8 @@ function main(params) {
   });
 
   var result = sc.login()
-    .then(sc.logger.bind(sc))
-    .finally(sc.logout.bind(sc));
+    .then(sc.logger)
+    .finally(sc.logout);
 }
 
 main({
