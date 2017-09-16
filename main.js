@@ -1,16 +1,32 @@
 var sunny_capture = require('./lib/sunnyboy-capture.js');
 var password = require('./password.js');
-
 var server = "https://192.168.1.140";
+var SunnyCapture = require('./lib/classTest.js');
+
+var dataHandler = function(resp) {
+  console.log(resp.headers.join(", "));
+  var i, len;
+  for (len = resp.data.length, i = 0; i < len; i++) {
+    console.log([
+      resp.data[i].date,
+      resp.data[i].time,
+      resp.data[i].power,
+      resp.data[i].raw
+    ].join(", "));
+  }
+}
 
 function main(params) {
-  sunny_capture.sunny_capture.server = server;
-  sunny_capture.sunny_capture.password = params.password;
-  sunny_capture.sunny_capture.date = params.date;
+  var sc = new SunnyCapture({
+    server: server,
+    date: params.date,
+    password: params.password,
+    handler: dataHandler,
+  });
 
-  return sunny_capture.sunny_capture.login()
-    .then(sunny_capture.sunny_capture.logger)
-    .then(sunny_capture.sunny_capture.logout);
+  var result = sc.login()
+    .then(sc.logger)
+    .finally(sc.logout);
 }
 
 main({
