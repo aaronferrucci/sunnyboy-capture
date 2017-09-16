@@ -2,7 +2,7 @@
   "name": "sunnyboy-capture",
   "version": "1.0.0",
   "description": "Encapsulates interactions with an SMA SB3.0-1SP-US-40 inverter.",
-  "main": "lib/sunny-capture.js",
+  "main": "lib/sunnyboy-capture.js",
   "directories": {
     "test": "test"
   },
