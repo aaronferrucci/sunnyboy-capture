@@ -1,7 +1,6 @@
-var sunny_capture = require('./lib/sunnyboy-capture.js');
+var SunnyCapture = require('./lib/sunnyboy-capture.js');
 var password = require('./password.js');
 var server = "https://192.168.1.140";
-var SunnyCapture = require('./lib/classTest.js');
 
 var dataHandler = function(resp) {
   console.log(resp.headers.join(", "));
