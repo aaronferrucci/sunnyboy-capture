@@ -1,4 +1,4 @@
-var sunny_capture = require('./lib/promise-test.js');
+var sunny_capture = require('./lib/sunnyboy-capture.js');
 var password = require('./password.js');
 
 var server = "https://192.168.1.140";
