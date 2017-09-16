@@ -1,0 +1,29 @@
+{
+  "name": "sunnyboy-capture",
+  "version": "1.0.0",
+  "description": "Encapsulates interactions with an SMA SB3.0-1SP-US-40 inverter.",
+  "main": "lib/sunny-capture.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronferrucci/sunnyboy-capture.git"
+  },
+  "keywords": [
+    "sma",
+    "sunny boy",
+    "inverter",
+    "data",
+    "logger"
+  ],
+  "author": "Aaron Ferrucci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronferrucci/sunnyboy-capture/issues"
+  },
+  "homepage": "https://github.com/aaronferrucci/sunnyboy-capture#readme"
+}
