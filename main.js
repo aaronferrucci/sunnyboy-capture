@@ -21,7 +21,12 @@ var dataHandler = function(resp) {
 }
 
 var infoHandler = function(resp) {
-  printKeyValue("info: ", resp);
+  var infoKeys = ["serial number", "firmware version", "ip address"];
+  var i, len;
+  for (len = infoKeys.length, i = 0; i < len; ++i) {
+    var key = infoKeys[i];
+    console.log([key, resp[key]].join(", "));
+  }
 }
 
 function main(params) {
