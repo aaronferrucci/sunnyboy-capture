@@ -17,3 +17,5 @@ Capture data from a Sunny Boy inverter
 
 * Usage example:
   * `% nodejs main.js 9/1/2017`
+
+The output is a few inverter parameters - firmware version, serial number, ip address - and then the data for the requested date, from 4AM to 10PM.
