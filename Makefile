@@ -31,5 +31,5 @@ existing_file:
 .PHONY: too_early
 too_early:
 	@echo "checking the hour ($(HOUR)) - is the data ready yet?"
-	@[ $(HOUR) -gt 22 ]
+	@[ $(PAST) -ne 0 -o $(HOUR) -gt 22 ]
 
