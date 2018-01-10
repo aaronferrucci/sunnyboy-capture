@@ -1,5 +1,4 @@
 SHELL := /bin/bash
-#nodejs main.js 12/31/2017 > ~/Documents/solar/data/2017/12/2017_12_31.csv
 
 # To be run at 10:05PM or later, every day
 # use PAST=1, 2, ... to capture data for previous days
@@ -32,4 +31,8 @@ existing_file:
 data_is_ready:
 	@echo "checking the time ($(HOUR):$(MIN)) - is the data ready yet?"
 	@[ $(PAST) -ne 0 -o $(HOUR) -gt 22 -o $(HOUR) -eq 22 -a $(MIN) -gt 4 ]
+
+help:
+	@echo Run at 10:05PM or later, every day
+	@echo Catchup: 'make PAST=1, 2, ...' for previous days\' data
 
